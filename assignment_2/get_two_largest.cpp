@@ -23,7 +23,7 @@ vector<int>getTwoLargestNumbers(vector<int>&A){
             }
             else if(max1>A[i]&&max2<A[i])
             {
-                max=A[i];
+                max2=A[i];
             }
         }
     }
