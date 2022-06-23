@@ -3,8 +3,10 @@ using namespace std;
 
  bool isTargetPresentin2d(vector<vector<int> >A, int target)
  {
-    for(int r=0;r<A.size();r++){
-        for(int c=0;c<A[0].size();c++){
+    for(int r=0;r<A.size();r++)
+    {
+        for(int c=0;c<A[0].size();c++)
+        {
             if(A[r][c]==target)
                 return true;
         }
@@ -18,7 +20,8 @@ bool isTragetPresentInRow(vector<vector<int> >A, int target, int r)
 
       for(int c=0;c<A[0].size();c++)   
       {
-         if(A[r-1][c]==target){
+         if(A[r][c]==target)
+         {
          	 return true;
          }
      }
@@ -34,12 +37,11 @@ bool isTragetPresentInCol(vector<vector<int> >A, int target, int c)
 
     for(int r=0;r<A.size();r++)   
       {
-         if(A[r][c-1]==target)
+         if(A[r][c]==target)
          {
          	      return true;
          }
-         
-         return true;
+
        }
     return false;
 }
