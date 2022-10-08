@@ -1,0 +1,68 @@
+/*bool is_prime(int n){
+    for(int x=2; x<=sqrt(n); x++){
+        if(n%x!=0){
+            return true;
+        }
+        return false;
+    }
+}*/
+
+/*bool is_prime(int a){
+    vector<int> v;
+    for(int i=1; i<=a;i++){
+        if(a%i==0){
+            v.push_back(i);
+            if(v.size()>2){
+                return false;
+            }
+        }
+    }
+    return true;
+}*/
+
+/*int is_prime(int x){
+    if(x==2)
+    return 1;
+
+    for(int i=2;i*i<=x;i++){
+        if(x%i==0)
+        return 0;
+    }
+    return 1;
+}
+
+vector<int> Solution::primesum(int n) {
+    
+    vector<int> vec;
+    for(int i=2; i=n; i++)
+    {
+        if(is_prime(i) && is_prime(n-i)){
+            vec.push_back(i);
+            vec.push_back(n-i);
+            return vec;
+        }
+    }   
+}*/
+
+int check_prime(int x){
+    if(x==2)
+    return 1;
+
+    for(int i=2;i*i<=x;i++){
+        if(x%i==0)
+        return 0;
+    }
+    return 1;
+}
+
+vector<int> Solution::primesum(int A) {
+    vector<int>ans;
+    for(int i=2;i<=A/2;i++){
+        if(check_prime(i)&&check_prime(A-i))
+       {
+           ans.push_back(i);
+           ans.push_back(A-i);
+              return ans;
+       } 
+    }
+}
